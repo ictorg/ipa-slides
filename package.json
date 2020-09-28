@@ -1,12 +1,13 @@
 {
   "name": "ipa-slides",
   "version": "0.0.1",
-  "description": "Kick-off presentation slides for candidates and mentors",
+  "description": "Kick-off presentation slides for candidates and mentors.",
   "main": "presentation.ts",
   "repository": "git@github.com:ictorg/ipa-slides.git",
   "author": "Robin Bühler",
   "private": true,
   "scripts": {
+    "dev": "webpack-dev-server",
     "build:dev": "webpack --config webpack.config.ts --mode development",
     "build:prod": "webpack --config webpack.config.ts --mode production"
   },
@@ -25,5 +26,9 @@
     "typescript": "^4.0.3",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "@types/webpack-dev-server": "^3.11.0",
+    "webpack-dev-server": "^3.11.0"
   }
 }
