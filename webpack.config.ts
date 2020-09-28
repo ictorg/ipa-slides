@@ -20,7 +20,7 @@ const config: webpack.Configuration = {
                 loader: 'css-loader'
             }]
         }, {
-            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+            test: /\.(woff(2)?|ttf|eot|svg|png|svg|jpg|gif)(\?v=\d+\.\d+\.\d+)?$/,
             loader: {
                 loader: 'file-loader',
                 options: {
