@@ -1,6 +1,7 @@
 import webpack from "webpack";
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 
 const config: webpack.Configuration = {
     entry: {
@@ -29,6 +30,9 @@ const config: webpack.Configuration = {
             filename: 'manager.html',
             template: path.resolve(__dirname, 'src', 'manager.html')
         }),
+        new CopyWebpackPlugin({ patterns: [
+            {from: path.resolve(__dirname, 'src', 'index.html'), to: path.resolve(__dirname, 'dist')}
+        ]})
     ]
 }
 
