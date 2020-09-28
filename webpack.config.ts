@@ -19,14 +19,25 @@ const config: webpack.Configuration = {
             }, {
                 loader: 'css-loader'
             }]
+        }, {
+            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+            loader: {
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'fonts/'
+                }
+            }
         }]
     },
     plugins: [
         new HtmlWebpackPlugin({
+            title: 'Kick-Off Präsentation der Kandidaten',
             filename: 'candidate.html',
             template: path.resolve(__dirname, 'src', 'candidate.html')
         }),
         new HtmlWebpackPlugin({
+            title: 'Kick-Off Präsentation der verantwortlichen Fachkräfte',
             filename: 'manager.html',
             template: path.resolve(__dirname, 'src', 'manager.html')
         }),

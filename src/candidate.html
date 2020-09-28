@@ -3,21 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title><%= htmlWebpackPlugin.options.title %></title>
     </head>
     <body>
         <div class="reveal">
-          <div class="slides">
-            <section>
-                Erste Seite
-            </section>
-            <section>
-                Zweite Seite
-            </section>
-            <section>
-                Dritte Seite
-            </section>
-          </div>
+            <div class="slides">
+                <section>
+                    Erste Seite
+                </section>
+                <section>
+                    Zweite Seite
+                </section>
+                <section>
+                    Dritte Seite
+                </section>
+                <%= require('html-loader!./pages/last.html') %>
+            </div>
         </div>
     </body>
 </html>
